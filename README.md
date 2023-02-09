@@ -23,7 +23,7 @@ Run experiments by running `python run_experiments.py`. The results will be save
 Place configuration files in `experiment_configs` folder. The configuration files are in json format. 
 The configuration files are used to specify the experiment parameters.
 
-### Visualization and Management
+### Management and UI
 
 Direct to ui folder and run `npm install` to install dependencies. Then run `npm start` to start the ui server. You will know see all your running experiments with results in the ui.
 
