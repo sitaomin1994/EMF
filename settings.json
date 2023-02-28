@@ -1,13 +1,14 @@
 {
   "mongodb_backend": {
-    "db": "federated_imputation",
+    "db": "db_name",
     "host": "localhost",
     "collections": [
-      "raw_experiment",
-      "missing_evaluation_experiment"
+      "experiment_name1",
+      "experiment_name2"
     ]
   },
+  "experiment_config_dir": "exp_config",
   "experiment_result_dir": "results",
-  "experiment_config_dir": "experiment_configs",
-  "experiment_record_dir": "experiment_records"
+  "processed_result_dir": "processed_results",
+  "raw_result_dir": "raw_results"
 }

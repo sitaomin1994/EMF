@@ -1,0 +1,37 @@
+# @package config_vars
+# This is a config file for variation 1 of variables for experiment1
+# variation_name is the unique name of this batch of variations
+# variation values:
+# - name: the name of the variation - value: list of values for the variation
+# - keys: the keys in the config template file for this which field to be changed
+# - save_mode: result save, whether the field will be saved in the result file name
+variation_name1:
+  # variation of dataset_name
+  - name: dataset_name
+    value: [breast]
+    keys:
+      - dataset
+      - name
+    save_mode: dir1
+
+  # variation of missing mechanism
+  - name: missing_mechanism
+    value: [mar]
+    save_mode: dir2
+    keys:
+      - missing_simulate
+      - ms_mechanism
+
+  # variation of missing ratios
+  - name: missing_ratios
+    value: [0.0, 0.1, 0.3, 0.5, 0.7, 0.9]
+    keys:
+      - missing_simulate
+      - ms_ratio
+
+  # variation of feature missing
+  - name: feature_missing
+    value: [0.1, 0.3, 0.5, 0.7, 0.9]
+    keys:
+      - missing_simulate
+      - ms_features
