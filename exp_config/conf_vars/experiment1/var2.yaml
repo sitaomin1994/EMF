@@ -1,5 +1,5 @@
 # @package config_vars
-# This is a config file for variation 2 of variables for experiment1
+# This is a config file for variation 2 of variables for experiment_tmpl
 # variation_name is the unique name of this batch of variations
 # variation values:
 # - name: the name of the variation - value: list of values for the variation

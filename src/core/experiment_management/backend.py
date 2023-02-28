@@ -35,7 +35,7 @@ class MongoBackend(Backend):
 
 	def save(self, experiment_type, experiment_result):
 		if self.db is None:
-			raise Exception("Please connect to MongoDB before saving experiment1 results")
+			raise Exception("Please connect to MongoDB before saving experiment_tmpl results")
 
 		if experiment_type not in self.db.list_collection_names():
 			self.db.create_collection(experiment_type)
@@ -68,7 +68,7 @@ class FileBackend:
 		dir_path = ROOT_DIR + "/" + self.result_dir_path + '/' + dir_name
 		Path(dir_path).mkdir(parents=True, exist_ok=True)
 
-		# save experiment1 data
+		# save experiment_tmpl data
 		with open(dir_path + '/' + file_name, 'w') as f:
 			json.dump(experiment_data, f)
 

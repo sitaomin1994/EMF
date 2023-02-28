@@ -1,12 +1,12 @@
 ---
-# This is a template config file for experiment1 1
+# This is a template config file for experiment_tmpl 1
 # Every key is a module name, and the value is a dict of parameters
-# For example: it has two sub_modules: dataset and experiment1
+# For example: it has two sub_modules: dataset and experiment_tmpl
 # dataset
 dataset:
   name: breast
 
-# experiment1 configs
+# experiment_tmpl configs
 experiment:
   n_rounds: 5
   seed: 42

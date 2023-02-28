@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 class Experiment(ABC):
 
 	"""
-	experiment1 class is the base class for all experiments.
+	experiment_tmpl class is the base class for all experiments.
 	"""
 
 	def __init__(self):
@@ -14,8 +14,8 @@ class Experiment(ABC):
 	@abstractmethod
 	def run():
 		"""
-		Runs the experiment1 and returns the results.
-		:return: results of the experiment1
+		Runs the experiment_tmpl and returns the results.
+		:return: results of the experiment_tmpl
 		"""
 		pass
 
@@ -23,7 +23,7 @@ class Experiment(ABC):
 	@abstractmethod
 	def pre_setup(self):
 		"""
-		Pre-setup for the experiment1.
+		Pre-setup for the experiment_tmpl.
 		"""
 		pass
 
@@ -31,6 +31,6 @@ class Experiment(ABC):
 	@abstractmethod
 	def post_process(self):
 		"""
-		Post-process for the experiment1.
+		Post-process for the experiment_tmpl.
 		"""
 		pass

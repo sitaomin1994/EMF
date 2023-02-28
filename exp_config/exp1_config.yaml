@@ -1,10 +1,10 @@
 
-# main config file for experiment1
-# experiment1 name
-experiment_name: experiment1
+# main config file for experiment_tmpl
+# experiment_tmpl name
+experiment_name: experiment_tmpl
 # config template and config of variations for running batch experiments
 defaults:
-  - conf_tmpl: experiment1
+  - conf_tmpl: experiment_tmpl
   - conf_vars/experiment1:
       - var1
       - var2

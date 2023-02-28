@@ -16,7 +16,7 @@ class ExperimentManager:
 		# file backend
 		self.file_backend = FileBackend()
 
-		# experiment1 instance
+		# experiment_tmpl instance
 		self.experiment_class = None
 
 	def set_experiment(self, experiment_class):
@@ -32,16 +32,16 @@ class ExperimentManager:
 			self.backend.connect()
 			logger.info("Connected to backend database")
 
-			# save experiment1 meta data
+			# save experiment_tmpl meta data
 			self.backend.save(experiment_type, experiment_meta)
-			logger.info("Saved experiment1 meta data")
+			logger.info("Saved experiment_tmpl meta data")
 		else:
 			self.file_backend.save(
 				experiment_meta["dir_name"], experiment_meta["filename"], experiment_meta
 			)
-			logger.info("Saved experiment1 meta data")
+			logger.info("Saved experiment_tmpl meta data")
 
-		# experiment1 start
+		# experiment_tmpl start
 		logger.info("Running {} experiments".format(len(exp_configs)))
 		start_global = time.time()
 
@@ -96,20 +96,20 @@ class ExperimentManager:
 			self.backend.connect()
 			logger.info("Connected to backend database")
 
-			# save experiment1 meta data
+			# save experiment_tmpl meta data
 			self.backend.save(experiment_type, experiment_meta)
-			logger.info("Saved experiment1 meta data")
+			logger.info("Saved experiment_tmpl meta data")
 		else:
 			self.file_backend.save(
 				experiment_meta["dir_name"], experiment_meta["filename"], experiment_meta
 			)
-			logger.info("Saved experiment1 meta data")
+			logger.info("Saved experiment_tmpl meta data")
 
 		num_processes = 8
 		chunk_size = len(exp_configs) // num_processes
 		#chunks = [exp_configs[i:i + chunk_size] for i in range(0, len(exp_configs), chunk_size)]
 
-		# experiment1 start
+		# experiment_tmpl start
 		logger.info("Running {} experiments parallel".format(len(exp_configs)))
 		with mp.Pool(num_processes) as pool:
 			process_args = [(idx, exp_config, experiment_type, experiment_id, self.experiment_class, self.file_backend,
