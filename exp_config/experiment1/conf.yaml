@@ -5,7 +5,7 @@ experiment_name: experiment_tmpl
 # config template and config of variations for running batch experiments
 defaults:
   - conf_tmpl: experiment_tmpl
-  - conf_vars/experiment1:
+  - conf_vars:
       - var1
       - var2
   - _self_
